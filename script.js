@@ -5,7 +5,7 @@ const init = () => {
     {
       center: [55.7718, 37.6316],
       zoom: 16,
-      controls: ["smallMapDefaultSet"],   // убрали линейку слева
+      controls: ["smallMapDefaultSet"], // убрали линейку слева
     },
     {}
   );
@@ -34,3 +34,5 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
 L.marker([55.7724, 37.6252]).addTo(map).bindPopup("E-trans").openPopup();
  */
+
+
