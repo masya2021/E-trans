@@ -376,10 +376,12 @@ img, svg {
 	margin: 0 auto;
 }
 .modal__title{
+	max-width: 320px;
 	font-weight: 700;
 	font-size: 30px;
+	line-height: 1.4;
 	text-align: center;
-	max-width: 380px;
+	color: #00654E;
 }
 .modal__form{
 	display: flex;
@@ -563,6 +565,13 @@ img, svg {
 		padding-top: 43px;
 	}
 }
+
+@media (max-width: 800px) {
+	.modal__block{
+		width: 520px;
+	}
+}
+
 @media (max-width: 720px){
 	.header__container{
 		grid-template-columns: 1fr 1fr;
@@ -646,5 +655,19 @@ img, svg {
 	}
 	.footer__copyright{
 		padding-top: 46px;
+	}
+
+
+	.modal__block{
+		width: 420px;
+	}
+	.modal__btn {
+		min-width: 260px;
+	}
+}
+
+@media (max-width: 466px) {
+	.modal__block{
+		width: 290px;
 	}
 }
