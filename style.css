@@ -47,7 +47,7 @@ a {
 
 img, svg {
 	display: block;
-	min-height: 100%;
+	max-width: 100%;
 	height: 100%;
 }
 
@@ -345,6 +345,98 @@ img, svg {
 	color: #FFFFFF;
 }
 
+.modal  {
+	position: fixed;
+	inset: 0;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: flex;
+	cursor: pointer;
+	
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal__block{
+	position: relative;
+	width: 680px;
+	padding: 40px 15px;
+	margin: auto;
+	background-color: #fff;
+	cursor: default;
+
+	border-radius: 8px;
+	border: 1px solid #646464;
+}
+.modal__container{
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	align-items: center;
+	max-width: 440px;
+	margin: 0 auto;
+}
+.modal__title{
+	font-weight: 700;
+	font-size: 30px;
+	text-align: center;
+	max-width: 380px;
+}
+.modal__form{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	width: 100%;
+}
+.modal__text{
+	display: block;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+.modal__input{
+	border: 1px solid #C0C0C0;
+	border-radius: 6px;
+	width: 100%;
+	height: 78px;
+	padding: 15px;
+}
+.modal__input::placeholder{
+	color: #C0C0C0;
+}
+.modal__close{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+.modal__btn {
+	min-width: 380px;
+	height: 78px;
+	padding: 14px 30p;
+	border: 2px solid transparent;
+	border-radius: 8px;
+	background-color: #B8FF20;
+	outline: none;
+
+	transition-property: background-color, color, border-color;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.3s, 0.3s, 0.2s;
+
+	font-weight: 700;  
+	font-size: 26px;
+	color: #18171A;
+}
+.modal__btn:hover {
+	background-color: #CDF478;
+}
+.modal__btn:focus {
+	border-color: #18171A;
+}
+.modal__btn:active {
+	color: #fff;
+	background-color: #18171A;
+}
+
+
+
 @media (max-width: 1200px){
 	.navigation__list{
 		gap: 20px;
@@ -426,6 +518,7 @@ img, svg {
 	}
 	.product__description{
 		margin-bottom: 20px;
+		-webkit-line-clamp: 3;
 	}
 	.product__btn{
 		 min-width: 260px;
@@ -522,9 +615,7 @@ img, svg {
 		align-items: center;
 		width: 100%;
 	}
-	.product__description{
-	-webkit-line-clamp: 3;
-	}
+	
 	.product__btn{
 		width: 100%;
 	}
